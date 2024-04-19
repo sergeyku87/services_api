@@ -2,6 +2,7 @@ FROM python:3.9-alpine3.16
 
 COPY requirements.txt /temp/requirements.txt
 
+#RUN apk add postgres-client build-base postgres-dev
 RUN pip install --upgrade pip
 RUN pip install -r /temp/requirements.txt
 RUN adduser --disabled-password admin
